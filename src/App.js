@@ -1,25 +1,29 @@
 import logo from './logo.svg';
+import styled from 'styled-components';
 import './App.css';
+import Calendar from './calendar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PageContainer>
+    <CalendarContainer>
+    <Calendar />
+    </CalendarContainer>
+    </PageContainer>
   );
 }
 
+const PageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin-top: 64px;
+`;
+
+
+const CalendarContainer = styled.div`
+  width: 400px;
+`
 export default App;
